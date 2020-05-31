@@ -14,7 +14,7 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/gsi/gsi_gms_arm64-exp-RPP4.200409.015-6455311.zip
+  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/flame-rpp4.200409.015-factory-8012c549.zip
   ROM_NAME: Pixel
   TZ: Asia/Shanghai
 
