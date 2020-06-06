@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://dl.google.com/developers/android/rvc/images/factory/flame-rpp4.200409.015-factory-8012c549.zip
-  ROM_NAME: Pixel
+  ROM_URL: https://ip4035230069.mobgslb.tbcache.com/Firmware/Flyme/meizu17_Pro/8.1.2.1/cn/20200515190836/94f35658/update.zip?ali_redirect_domain=firmware.meizu.com&ali_redirect_ex_ftag=058eb30c77c2a42ad6192a43a0820b5be4b207b53c8c8a5b&ali_redirect_ex_tmining_ts=1591439271&ali_redirect_ex_tmining_expire=3600&ali_redirect_ex_hot=100
+  ROM_NAME: Flyme
   TZ: Asia/Shanghai
 
 jobs:
@@ -51,13 +51,13 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate Aonly GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh -b $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh -a $ROM_URL $ROM_NAME
        
-       - name: 7z Aonly GSI
+       - name: 7z GSI
          run: |
            7za a -t7z -r ErfanGsi.7z ErfanGSIs/output/*
        
-       - name: Upload Aonly GSI to WeTransfer
+       - name: Upload GSI to WeTransfer
          run: |
               curl -sL https://git.io/file-transfer | sh
               ./transfer wet ErfanGsi.7z
