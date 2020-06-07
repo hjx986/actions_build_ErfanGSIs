@@ -14,8 +14,8 @@ on:
     types: [started]
     
 env:
-  ROM_URL: https://ip4035230069.mobgslb.tbcache.com/Firmware/Flyme/meizu17_Pro/8.1.2.1/cn/20200515190836/94f35658/update.zip?ali_redirect_domain=firmware.meizu.com&ali_redirect_ex_ftag=058eb30c77c2a42ad6192a43a0820b5be4b207b53c8c8a5b&ali_redirect_ex_tmining_ts=1591439271&ali_redirect_ex_tmining_expire=3600&ali_redirect_ex_hot=100
-  ROM_NAME: Flyme
+  ROM_URL: https://hugeota.d.miui.com/20.6.3/miui_RAPHAEL_20.6.3_833dad682c_10.0.zip
+  ROM_NAME: MIUI
   TZ: Asia/Shanghai
 
 jobs:
