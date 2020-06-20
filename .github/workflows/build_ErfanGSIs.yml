@@ -15,7 +15,7 @@ on:
     
 env:
   ROM_URL: https://dl.google.com/developers/android/rvc/images/gsi/aosp_arm64-exp-RPP4.200409.015-6455311.zip
-  ROM_NAME: Pixel
+  ROM_NAME: Generic
   TZ: Asia/Shanghai
 
 jobs:
@@ -51,7 +51,7 @@ jobs:
               sudo bash setup.sh
        
        - name: Download Stock Rom & Generate GSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME
+         run: sudo ./ErfanGSIs/url2GSI.sh -b $ROM_URL $ROM_NAME
        
        - name: 7z GSI
          run: |
